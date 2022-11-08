@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
 import { Actor, HttpAgent } from "@dfinity/agent";
 import {idlFactory} from "../../../declarations/nft";
+import {idlFactory as tokenIdlFactory} from "../../../declarations/token";
 import {Principal} from "@dfinity/principal";
 import Button from "./Button";
 import { opend } from "../../../declarations/opend";
@@ -95,6 +96,20 @@ function Item(arg) {
   }
   async function buy(){
     console.log("Buy NOW!!!");
+    //create canister actor (like reference of the buyer) for buyer 
+    const tokenActor = await Actor.createActor(tokenIdlFactory,{
+      agent,
+      canisterId: Principal.fromText("q3fc5-haaaa-aaaaa-aaahq-cai"),
+    });
+    //transfer the money from buyer to seller
+    //get seller id
+    const Seller_ID = await opend.getOGOwner(arg.id);
+    const Item_price = await opend.getSellPrice(arg.id);
+    //passed the money to seller from buyer
+    const result = await tokenActor.transfer(Seller_ID,Item_price);
+    console.log(result);
+    //transfer the ownership to buyer
+    
   }
   async function ConfirmSell(){
     //blur the item that be clicked to sell by filter function
