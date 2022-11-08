@@ -1,0 +1,10 @@
+service : {
+  checkListed: (principal) -> (bool) query;
+  fetchListedNFTs: () -> (vec principal) query;
+  fetchOwnedNFTs: (principal) -> (vec principal) query;
+  getOldOwner: (principal) -> (principal) query;
+  getOpenDCanisterID: () -> (principal) query;
+  isListed: (principal) -> (bool) query;
+  listItem: (principal, nat) -> (text);
+  mint: (vec nat8, text) -> (principal);
+}
