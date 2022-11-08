@@ -6,7 +6,7 @@ import {Principal} from "@dfinity/principal";
 import Button from "./Button";
 import { opend } from "../../../declarations/opend";
 import CURRENT_USER_ID from "../index";
-// import PriceLabel from "./PriceLabel";
+import PriceLabel from "./Price";
 
 function Item(arg) {
   //declare the name
@@ -19,7 +19,7 @@ function Item(arg) {
   const [loderHidden, setLoderHidden] = useState(true);
   const [blur, setBlur] = useState();
   const [status, setStatus] = useState("");
-  // const [priceLabel, setPriceLabel] = useState();
+  const [priceLabel, setPriceLabel] = useState();
 
   //turn input to principle type
   const id = arg.id;
@@ -67,8 +67,11 @@ function Item(arg) {
       if(originalOwner.toText() != CURRENT_USER_ID.toText()){
         setButton(<Button handleClick={buy} text ={"Buy"}/> );
       }
+      //retrive sell price and passed to priceLabel 
+      const PriceToSell = await opend.getSellPrice(arg.id);
+      console.log(PriceToSell);
+      setPriceLabel(<PriceLabel sellPrice={PriceToSell.toString()}/>);
     }
-
   }
 
   useEffect(()=>{
@@ -132,6 +135,7 @@ function Item(arg) {
         </div>
 
         <div className="disCardContent-root">
+          {priceLabel}
           <h2 className="disTypography-root makeStyles-bodyText-24 disTypography-h5 disTypography-gutterBottom">
           <span className="purple-text">{status}</span>
           {name}

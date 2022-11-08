@@ -121,5 +121,14 @@ actor OpenD {
       case (?result) result
       };
       return Listing.itemOwner;
+  };
+
+  public query func getSellPrice(id:Principal):async Nat{
+      //check if NFT(id) actually inside the listing
+      var Listing:Listing = switch(mapOfListings.get(id)){
+      case null return 0;
+      case (?result) result;
+      };
+      return Listing.itemPrice;
   }
 };
