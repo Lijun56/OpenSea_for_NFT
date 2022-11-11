@@ -109,6 +109,11 @@ function Item(arg) {
     const result = await tokenActor.transfer(Seller_ID,Item_price);
     console.log(result);
     //transfer the ownership to buyer
+    if(result == "Success"){
+      const TransferResult = await opend.completePurchase(arg.id, Seller_ID, CURRENT_USER_ID);
+      console.log("purchased check: "+TransferResult);
+
+    }
     
   }
   async function ConfirmSell(){
@@ -118,6 +123,7 @@ function Item(arg) {
     console.log("confirm the sell");
     const listingResult = await opend.listItem(arg.id, Number(price));
     console.log("listing info: "+ listingResult);
+
     if(listingResult == "Success"){
       //get new owner's principal id 
       const openID  = await opend.getOpenDCanisterID();
@@ -132,6 +138,7 @@ function Item(arg) {
         setStatus("[LISTED]");
       }
     }
+
   }
 
   return (

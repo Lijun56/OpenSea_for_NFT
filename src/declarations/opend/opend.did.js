@@ -1,6 +1,11 @@
 export const idlFactory = ({ IDL }) => {
   return IDL.Service({
     'checkListed' : IDL.Func([IDL.Principal], [IDL.Bool], ['query']),
+    'completePurchase' : IDL.Func(
+        [IDL.Principal, IDL.Principal, IDL.Principal],
+        [IDL.Text],
+        [],
+      ),
     'fetchListedNFTs' : IDL.Func([], [IDL.Vec(IDL.Principal)], ['query']),
     'fetchOwnedNFTs' : IDL.Func(
         [IDL.Principal],

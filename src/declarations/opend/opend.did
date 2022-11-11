@@ -1,5 +1,6 @@
 service : {
   checkListed: (principal) -> (bool) query;
+  completePurchase: (principal, principal, principal) -> (text);
   fetchListedNFTs: () -> (vec principal) query;
   fetchOwnedNFTs: (principal) -> (vec principal) query;
   getOGOwner: (principal) -> (principal) query;

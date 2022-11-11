@@ -132,13 +132,13 @@ actor OpenD {
       return Listing.itemPrice;
   };
 
-  public shared(msg) func transferOwnerShip(NFTid: Principal, OwnerID: Principal, BuyerID: Principal):async Text{
+  public shared(msg) func completePurchase(NFTid: Principal, OwnerID: Principal, BuyerID: Principal):async Text{
     var nft : NFTActorClass.NFT = switch(mapOfNFTs.get(NFTid)){
       case null return "NFT not exist";
       case (?result) result
     };
     //here we do transfer function, here transferOwnership is function in the token
-    let transferResult = nft.transferOwnership(BuyerID);
+    let transferResult = await nft.transferOwnerShip(BuyerID);
     if(transferResult == "Success"){
       mapOfListings.delete(NFTid);
       var ownedNFTs: List.List<Principal> = switch (mapOfOwners.get(OwnerID)){
@@ -150,7 +150,7 @@ actor OpenD {
         return ListItemID != NFTid;
       });
       //pass ownership to buyer 
-      addToOwnerMap(BuyerID, id);
+      addToOwnerMap(BuyerID, NFTid);
       return "Success";
     }else{
       return "Error when passing ownership";
