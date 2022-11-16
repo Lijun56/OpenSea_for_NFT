@@ -1,5 +1,64 @@
-# To Install and Run the Project
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a name="readme-top"></a>
+<!-- [![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url] -->
 
+
+
+<!-- TABLE OF CONTENTS -->
+# Table of Contents
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+
+<!-- GETTING STARTED -->
+# Intro
+Simulation of the OpenSea website with implementation of:
+1. generate non-fungible token
+2. enable user create, sell, and buy NFTs
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+
+
+
+# Built With(Technology Stack)
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
+* [motoko][Next-url]
+* [react.js][Next-url]
+* [express.js][Next-url]
+* [dfx][Next-url]
+
+
+
+
+
+
+# Installation
+
+_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+
+### Install and Run the Project
 1. start local dfx
 
 ```
@@ -22,7 +81,7 @@ dfx deploy --argument='("CryptoDunks #123", principal "3x2rt-opbez-2tupe-oilnc-a
 
 http://localhost:8080/
 
-# Minter Else HTML
+### Minter Else HTML
 
 ```
  <div className="minter-container">
@@ -35,51 +94,8 @@ http://localhost:8080/
 
 ```
 
-# Loader HTML
 
-```
-<div className="lds-ellipsis">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-```
-
-# Button HTML
-
-```
-<div className="Chip-root makeStyles-chipBlue-108 Chip-clickable">
-            <span
-              onClick={}
-              className="form-Chip-label"
-            >
-              Sell
-            </span>
-            </div>
-```
-
-# Price Input HTML
-
-```
-<input
-        placeholder="Price in DANG"
-        type="number"
-        className="price-input"
-        value={}
-        onChange={}
-      />
-```
-
-# Price Label HTML
-
-```
-<div className="disButtonBase-root disChip-root makeStyles-price-23 disChip-outlined">
-          <span className="disChip-label">23 DANG</span>
-        </div>
-```
-
-# Creating NFT for Testing
+### Creating NFT for Testing
 
 1. Mint an NFT on the command line to get NFT into mapOfNFTs:
 
@@ -105,12 +121,21 @@ dfx canister id opend
 dfx canister call si2b5-pyaaa-aaaaa-aaaja-cai transferOwnerShip '(principal "ryjl3-tyaaa-aaaaa-aaaba-cai", true)'
 ```
 
-# Conneting to the Token Canister
 
-1. Copy over the token declarations folder
 
-2. Set the token canister id into the <REPLACE WITH TOKEN CANISTER ID>
 
-```
-const dangPrincipal = Principal.fromText("<REPLACE WITH TOKEN CANISTER ID>");
-```
+<!-- USAGE EXAMPLES -->
+# Uasge&Instruction
+
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+_For more examples, please refer to the [Documentation](https://example.com)_
+
+
+<!-- CONTACT -->
+# Contact
+
+Bilibili - [@AdultCarrot](https://space.bilibili.com/621731855?spm_id_from=333.788.0.0)
+
+Hashnode - [@LijunZhu](https://lijun.hashnode.dev/)
+
