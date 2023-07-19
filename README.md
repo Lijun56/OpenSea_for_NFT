@@ -1,41 +1,30 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-<!-- [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url] -->
-
-
-
 <!-- TABLE OF CONTENTS -->
 # Table of Contents
-  <ol>
-    <li><a href="#Intro">Intro</a></li>
-    <li><a href="#Built With(Technology Stack)">Built With(Technology Stack)</a></li>
-    <li>
-      <a href="#Installation">Installation</a>
-      <ul>
-        <li><a href="#built-with">Install and Run the Project</a></li>
-      </ul>
-      <ul>
-        <li><a href="#built-with">Minter Else HTML</a></li>
-      </ul>
-      <ul>
-        <li><a href="#built-with">Creating NFT for Testing</a></li>
-      </ul>
-    </li>
-    <li><a href="#Uasge&Instruction">Uasge&Instruction</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
+- [Table of Contents](#table-of-contents)
+- [OpenSea\_for\_NFT](#opensea_for_nft)
+- [Built With(Technology Stack)](#built-withtechnology-stack)
+- [Installation](#installation)
+    - [Install and Run the Project](#install-and-run-the-project)
+    - [Minter Else HTML](#minter-else-html)
+    - [Creating NFT for Testing](#creating-nft-for-testing)
+- [Uasge\&Instruction](#uasgeinstruction)
+- [Contact](#contact)
 
-<!-- GETTING STARTED -->
-# Intro
-Simulation of the OpenSea website with implementation of:
-1. generate non-fungible token
-2. enable user create, sell, and buy NFTs
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+# OpenSea_for_NFT
 
+[![GitHub license](<https://img.shields.io/badge/license-MIT-blue.svg>)](<https://github.com/Lijun56/OpenSea_for_NFT/blob/master/LICENSE>)
+![](docs/frontpage.jpg)
+
+Welcome to the OpenSea_for_NFT project, an open-source platform designed to bring the functionality of the world's largest NFT marketplace, OpenSea, directly to your development environment. We believe in the power of non-fungible tokens (NFTs) to reshape the digital world, offering new ways to create, trade, and own digital assets. We also believe in the importance of open source software, which enables collective problem-solving and drives forward technological progress.
+
+In this project, we marry these two passions: blockchain technology and open source collaboration. Our goal is to create a **decentralized** platform that is robust, efficient, user-friendly, and above all, transparent. With this project, we aim to empower developers to build their own NFT marketplaces, integrate NFT functionalities into their existing platforms, and join the exciting frontier of the NFT world.
+
+**In this website, users are able to:** 
+
+1. **Generate their own non-fungible token**
+2. **Sell and buy other NFTs available in the market**
+![](docs/create.jpg)
+Whether you're an experienced blockchain developer or a newcomer to the field, we welcome your contributions and look forward to building the future of digital asset trading with you.
 
 
 # Built With(Technology Stack)
@@ -45,11 +34,6 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [react.js][Next-url]
 * [express.js][Next-url]
 * [dfx][Next-url]
-
-
-
-
-
 
 # Installation
 
